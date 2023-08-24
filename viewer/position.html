@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .frame1{
+            padding: 50px;
+            border: 3px solid blue;
+            margin: 50px auto;
+            width: 700px;
+            height: 5000px;
+        }
+
+        .frame2{
+            width: 600px;
+            height: 300px;
+            border: 3px solid #000;
+            position: relative;
+        }
+        
+        .frag{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            color: white;
+            margin-bottom: 10px;
+            border: 1px solid black;
+        }
+
+        .dg1{
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            z-index: 1;
+            
+        }
+
+        .dg3{
+            position: relative;
+            /* top: 10px;
+            bottom: 10px;
+            left: 20px; */
+            z-index: 0;
+
+        }
+
+        .dg3:hover{
+            left: 20px;
+            top: 10px;
+        }
+
+        .dg4{
+            position: fixed;
+            right: 100px;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Position</h1>
+    <div class="frame1">
+        <div class="frame2">
+            <div class="frag dg1">
+                대
+            </div>
+            <div class="frag dg2">
+                구
+            </div>
+            <div class="frag dg3">
+                시
+            </div>
+            <div class="frag dg4">
+                민
+            </div>
+        </div>
+    </div>
+</body>
+</html>

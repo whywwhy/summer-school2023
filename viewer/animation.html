@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes bomb{
+            0%{
+                font-size: 10px;
+            }
+            70%{
+                font-size: 20px;
+                transform: translateX(480px);
+                font-size: 12em;
+            }
+            100%{
+                color: red;
+                transform: translateX(480px);
+                font-size: 12em;
+            }
+        }
+
+        @keyframes roatating{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        #bombBox{
+            margin-top: 100px;
+
+            animation-name: bomb;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        #rotateBox{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            animation-name: roatating;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div id="bombBox">
+        꽝
+    </div>
+
+    <div id="rotateBox">
+        꽝
+    </div>
+</body>
+</html>

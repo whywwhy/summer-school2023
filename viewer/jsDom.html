@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeDivText(){
+            let divNo = document.querySelector("#divNo").value;
+            let target = document.querySelector('#div'+divNo);
+            let text = document.querySelector("#HTML").value;
+            target.innerHTML = text;
+        }
+
+        function changeDivBg(){
+            let divNo = document.querySelector("#divNo").value;
+            let target = document.querySelector('#div'+divNo);
+            let color = document.querySelector("#color").value;
+            target.style.backgroundColor = color;
+        }
+    </script>
+    <style>
+        div{
+            padding: 20px;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body id="controlBox">
+    <div>
+        <input type="text" id="divNo" placeholder="DIV번호" size="1">
+        <input type="text" name="" id="HTML" placeholder="변경내용">
+        <input type="color" id="color">
+        <button type="button" onclick="changeDivText()">글자변경</button>
+        <button type="button" onclick="changeDivBg()">배경변경</button>
+    </div>
+    <div class="html" id="div1">
+        Tag:div, class:html, id:div1
+    </div>
+    <div class="html" id="div2">
+        Tag:div, class:html, id:div2
+    </div>
+    <div class="html" id="div3">
+        Tag:div, class:html, id:div3
+    </div>
+    <div class="js" id="div4">
+        Tag:div, class:js, id:div4
+    </div>
+    <div class="js" id="div5">
+        Tag:div, class:js, id:div5
+    </div>
+</body>
+</html>

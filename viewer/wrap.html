@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        div{
+            border: 1px solid #000;
+            width: 300px;
+        }
+
+        .wrap{
+            white-space: normal;
+        }
+
+        .nowrap{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .pre{
+            white-space: pre;
+        }
+
+        .prewrap{
+            white-space: pre-wrap;
+        }
+
+        .preline{
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS White-space</h1>
+    <div class="wrap">
+        우와 지금은 열한시 이십 칠분. 
+        삼십분 후면 점심 먹는데 오늘 점심이 뭐지 길게 길게 적어야하는데
+        아무말이나  길                       게 
+        엔터랑 같이
+    </div>
+
+    <div class="nowrap" title="아무말이나 길게 길게 기이이이ㅣㅇㄹ게 작성하기">
+        우와 지금은 열한시 이십 칠분. 
+        삼십분 후면 점심 먹는데 오늘 점심이 뭐지 길게 길게 적어야하는데
+        아무말이나  길                       게 
+        엔터랑 같이
+    </div>
+
+    <div class="pre">
+        우와 지금은 열한시 이십 칠분. 
+        삼십분 후면 점심 먹는데 오늘 점심이 뭐지 길게 길게 적어야하는데
+        아무말이나  길                       게 
+        엔터랑 같이
+    </div>
+
+    <div class="prewrap">
+        우와 지금은 열한시 이십 칠분. 
+        삼십분 후면 점심 먹는데 오늘 점심이 뭐지 길게 길게 적어야하는데
+        아무말이나  길                      게 
+        엔터랑 같이
+    </div>
+
+    <div class="preline">
+        우와 지금은 열한시 이십 칠분. 
+        삼십분 후면 점심 먹는데 오늘 점심이 뭐지 길게 길게 적어야하는데
+        아무말이나  길                      게 
+        엔터랑 같이
+    </div>
+</body>
+</html>

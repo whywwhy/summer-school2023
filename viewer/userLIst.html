@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function getList(){
+            axios.get("http://dgsw.kclee.kr:5600/user/list").then((res)=>{
+                console.log(res.data)
+                let liText = "";
+                for(let user of res.data.user){
+                    liText += `<li>${user.userId} / ${user.userName}</li>`
+                }
+                document.querySelector('#list').innerHTML = liText;
+            })
+        }
+            function register(){
+                if(confirm("가입하시겠습니까?")){
+                    axios.post("http://dgsw.kclee.kr:5600/user/add", {
+                        userId:document.querySelector("#userId").value,
+                        userName:document.querySelector("#userName").value,
+                    }).then((res)=>{
+                        console.log(res.data)
+                        if(res.data.error){
+                            alert(res.data.msg)
+                        } else{
+                            alert("가입 완료")
+                        }
+                    })
+                }
+            }
+    </script>
+</head>
+<body onload="getList()">
+    <div>
+        아이디 <input type="text" id="userId"><br>
+        이름 <input type="text" id="userName"><br>
+        <button type="button" onclick="register()">가입하기</button>
+    </div>
+    <ul id="list">
+
+    </ul>
+</body>
+</html>
